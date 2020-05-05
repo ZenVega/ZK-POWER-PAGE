@@ -1,0 +1,103 @@
+* {
+  padding: 0;
+  margin: 0;
+
+}
+
+@font-face {
+  font-family: 'stigmate';
+  src: url("../stigmate/webfonts/Stigmate-Regular.woff2"),
+       url("../stigmate/webfonts/Stigmate-Regular.woff");
+}
+
+body{
+
+display: grid;
+grid-template-columns: 1fr repeat(3, 2fr);
+ background-color: #000000;
+ background-attachment: scroll;
+ padding: 0px;
+ margin: 0px;
+}
+
+
+header {
+  position: relative;
+  float: left;
+  grid-column: 1 / 2;
+  padding: 1em;
+  margin: 0 10%;
+  width: 100%;
+  z-index: 2;
+}
+
+header h3{
+  margin-top: 1em;
+  border: 0.5px solid white;
+  padding: 1em;
+  font-family: 'stigmate';
+  color: white;
+  text-align: justify;
+}
+
+main {
+  grid-column: 2 / span 6;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  position: relative;
+  color: #000000;
+  padding: 1em;
+}
+
+#mainPic {
+  border-radius: 5px;
+  margin-bottom: 2%;
+  width: 100%;
+  grid-column: 1 / span 3;
+}
+
+#mainPro {
+  grid-column: 1 / span 3;
+  margin-bottom: 5%;
+}
+
+#projects {
+  
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 90%;
+  max-width: 800px;
+  grid-gap: 20px;
+  padding: 20px;
+
+}
+
+
+.project img {
+  max-width: 100%;
+  border-radius: 5px;
+
+}
+
+h2 {
+  color: #666666;
+}
+
+footer {
+  margin-left: 1em;
+  top: 10em;
+  position: relative;
+}
+
+.logotext{
+  width: 50px;
+}
+
+
+#gradient {
+  position: fixed;
+  width: 100%;
+  height: 800px;
+  padding: 0px;
+  margin: 0px;
+}
