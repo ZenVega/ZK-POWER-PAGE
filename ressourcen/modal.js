@@ -1,9 +1,13 @@
+<<<<<<< HEAD
 //import { content } from './projects.js'
 
+=======
+>>>>>>> 5823c0ec046e3a1269ca431d35e0077c3c38fccd
 const modal = document.getElementById("modal");
 const modalBtn = document.getElementsByClassName("project");
 const closeBtn = document.getElementById('closeBtn');
 
+<<<<<<< HEAD
 let content = {"projects" : [
     { "no": 1 , "title": "some title 1" , "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At, ipsam voluptatibus! Quibusdam, aliquid expedita! Officia nam cumque itaque blanditiis reprehenderit.", "images": [
         {"src": "ressourcen/img/spacecat1.jpg"}
@@ -21,6 +25,8 @@ let content = {"projects" : [
     { "no": 10 , "title": "some title 10" , "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At, ipsam vol", "images": []}
     ]};
 
+=======
+>>>>>>> 5823c0ec046e3a1269ca431d35e0077c3c38fccd
 export const openModal = () => {
     modal.style.display = "block";
     console.log(123);
@@ -41,15 +47,12 @@ let insideModal = (num) => {
             pic[i].src = project.images[i].src;
             modalContent.appendChild(i);
         }}
-        ) 
+        )
 
-    
+
     let title = document.createElement('h2');
     title.innerHTML = content.projects[num -1].title;
     let description = document.createElement('p');
     description.innerHTML = content.projects[num -1].description;
 
 }
-
-
-insideModal(1);
