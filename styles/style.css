@@ -121,3 +121,29 @@ footer {
   padding: 0px;
   margin: 0px;
 }
+
+
+#modal {
+  display: none;
+  position: fixed;
+  border: black 2px;
+  left: 10%;
+  top: 10%;
+  width: 70%;
+  height: 70%;
+  z-index: 2;
+  background-color: rgba(255,255,255, 0.8);
+  padding: 5%;
+  overflow: auto;
+}
+
+#closeBtn {
+  float: right;
+  color: #504e4e;
+  font-size: 30px;
+}
+
+#closeBtn:hover, #closeBtn:focus {
+  color:#30bbb4;
+
+}

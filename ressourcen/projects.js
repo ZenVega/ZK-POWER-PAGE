@@ -1,9 +1,23 @@
+import { openModal } from './modal.js'
+
+//const content = require('./projects.json')
+async function getData(url) {
+    const response = await fetch(url);
+    console.log(response);
+    return response.json()
+}
+
+async function main() {
+    const data = await getData('./projects.json');
+    console.log(data)
+}
+main();
 
 //get number of projects / create shuffled array
 
 let numberOfProjects = 10;
 let projects = [];
-for(i=1; i < numberOfProjects+1; i++){
+for(let i=1; i < numberOfProjects+1; i++){
     projects.push(i);
 };
 
@@ -24,7 +38,9 @@ if(firstPic) {
     project.id = 'mainPro'
     firstPic = false;
 }
+
 project.appendChild(img);
+project.addEventListener("click", openModal);
 
 let title = document.createElement('h2');
 title.innerHTML = 'Project no: ' + num ;
@@ -36,7 +52,6 @@ file.appendChild(project);
 
 let firstPic = true;
 
-for (num of projects) {
+for (let num of projects) {
     newProject(num);
 }
-
