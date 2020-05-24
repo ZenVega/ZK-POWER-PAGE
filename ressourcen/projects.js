@@ -1,17 +1,17 @@
 import { openModal } from './modal.js'
 
 //const content = require('./projects.json')
-async function getData(url) {
+const getData = async(url) => {
     const response = await fetch(url);
     console.log(response);
     return response.json()
 }
 
-async function main() {
+const saveJSONContent = async() => {
     const data = await getData('./projects.json');
     console.log(data)
 }
-main();
+saveJSONContent();
 
 //get number of projects / create shuffled array
 
