@@ -1,10 +1,6 @@
-import { content } from './projects.js'
-
 const modal = document.getElementById("modal");
 const modalBtn = document.getElementsByClassName("project");
 const closeBtn = document.getElementById('closeBtn');
-
-
 
 export const openModal = () => {
     modal.style.display = "block";
@@ -24,12 +20,10 @@ let insideModal = (num) => {
             let i = document.createElement('img');
             i.src = project.images[i].src;
         }}
-        ) 
+        )
 
-    
+
     let title = document.createElement('h2');
     let description = document.createElement('p');
 
 }
-
-
