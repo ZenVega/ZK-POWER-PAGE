@@ -51,3 +51,5 @@ const renderProjects = content => {
 }
 
 loadProjects('./projects.json').then(renderProjects)
+
+

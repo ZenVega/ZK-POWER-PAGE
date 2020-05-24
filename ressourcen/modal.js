@@ -29,4 +29,8 @@ let insideModal = (num) => {
     description.innerHTML = content.projects[num -1].description;
     modalContent.appendChild(title);
     modalContent.appendChild(description);
+
+    modal.appendChild(modalContent);
 }
+
+insideModal(1);
