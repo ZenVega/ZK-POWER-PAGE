@@ -34,16 +34,15 @@ const renderProjects = content => {
 
     //Sets the first chosen Project as main preview
     if(firstPic) {
-      img.id = 'mainPic';
-      project.className = 'mainPro'
+      project.className = 'project mainPro'
       firstPic = false;
-    } 
+    }
 
       project.id = num;
       //Project specific content from JSON file as *.value to pass it to modal.js
       project.value = content.projects[num-1];
-    
-    
+
+
     project.appendChild(img);
     project.addEventListener("click", function(e){openModal(e.currentTarget)});
 
@@ -62,5 +61,3 @@ const renderProjects = content => {
 }
 //passing promise to render Projects
 loadProjects('./projects.json').then(renderProjects)
-
-
