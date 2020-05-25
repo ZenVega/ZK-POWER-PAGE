@@ -1,6 +1,6 @@
 import { openModal } from './modal.js'
 //importing projects.JSON
-let projectContent;
+
 const loadProjects = async(url) => {
   const response = await fetch(url);
   return response.json()
@@ -8,16 +8,19 @@ const loadProjects = async(url) => {
 
 const renderProjects = content => {
 
-  //get number of projects / create shuffled array
+  //get number of projects / create project array
   console.log(content);
-  let numberOfProjects = 10;
+  let numberOfProjects = content.projects.length;
   let projects = [];
   for(let i=1; i < numberOfProjects+1; i++){
     projects.push(i);
   };
 
-  projects.sort(() => Math.random() - 0.5);
-
+  //pick random project and put it up front
+  let randomProject = Math.floor(Math.random() *numberOfProjects);
+  console.log(randomProject);
+  let chosenOne = projects.slice(randomProject, 1);
+  console.log(chosenOne);
   // add titles and pics to main
 
   let newProject = (num) => {
