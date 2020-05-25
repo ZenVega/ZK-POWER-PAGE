@@ -1,7 +1,6 @@
 const modal = document.getElementById("modal");
 const closeBtn = document.getElementById('closeBtn');
 
-
 export const openModal = (t) => {
     console.log(t);
     insideModal(t)
@@ -38,5 +37,3 @@ export let insideModal = (projectContent) => {
 
     modal.appendChild(modalContent);
 }
-
-
