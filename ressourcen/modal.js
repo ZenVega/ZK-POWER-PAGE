@@ -1,10 +1,11 @@
 const modal = document.getElementById("modal");
-const modalBtn = document.getElementsByClassName("project");
 const closeBtn = document.getElementById('closeBtn');
 
-export const openModal = () => {
+
+export const openModal = (t) => {
+    console.log(t);
+    insideModal(t)
     modal.style.display = "block";
-    console.log(123);
 }
 
 const closeModal = () => {
@@ -13,9 +14,14 @@ const closeModal = () => {
 
 closeBtn.addEventListener("click", closeModal);
 
-let insideModal = (num) => {
+//generate individual content for each project modal
+export let insideModal = (projectContent) => {
+    if(document.getElementById('modalContent')){
+        document.getElementById('modalContent').remove();}
+    console.log(projectContent);
     let modalContent = document.createElement('div');
-    let project = content.projects[num]
+    modalContent.id = 'modalContent';
+    let project = projectContent.value;
         let pic = [];
         for (let i=0; i < project.images.length; i++){
             pic[i] = document.createElement('img');
@@ -24,13 +30,13 @@ let insideModal = (num) => {
         }
 
     let title = document.createElement('h2');
-    title.innerHTML = content.projects[num -1].title;
+    title.innerHTML = project.title;
     let description = document.createElement('p');
-    description.innerHTML = content.projects[num -1].description;
+    description.innerHTML = project.description;
     modalContent.appendChild(title);
     modalContent.appendChild(description);
 
     modal.appendChild(modalContent);
 }
 
-insideModal(1);
+
