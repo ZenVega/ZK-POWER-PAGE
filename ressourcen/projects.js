@@ -8,25 +8,32 @@ const loadProjects = async(url) => {
 
 const renderProjects = content => {
 
+console.log(content);
+//let projectTitle = content.
+
   //get number of projects / create project array
   let numberOfProjects = content.projects.length;
-  let projects = [];
-  for(let i=1; i < numberOfProjects+1; i++){
-    projects.push(i);
-  };
+  console.log(numberOfProjects);
+  let projects = content.projects;
 
   //pick random project and put it up front
   let randomProject = Math.floor(Math.random() *numberOfProjects);
-  let chosenOne = projects.slice(randomProject, 1);
-  // add titles and pics to main
+  let chosenOne = projects.splice(randomProject, 1);
+  projects.unshift(chosenOne[0]);
+  console.log(projects);
 
-  let newProject = (num) => {
+  // add titles and pics to main
+  let newProject = (currentProject) => {
+    let projectTitle = currentProject.title;
+    let projectDescription = currentProject.description;
+    let projectImages = currentProject.images;
+
     let file = document.getElementById('projects');
     let project = document.createElement('div');
     project.classList.add('project');
 
     let img = document.createElement('img');
-    img.src = 'ressourcen/img/spacecat' + num + '.jpg';
+    img.src = projectImages[0].src;
 
     //Sets the first chosen Project as main preview
     if(firstPic) {
@@ -34,15 +41,11 @@ const renderProjects = content => {
       firstPic = false;
     }
 
-    project.id = num;
-    //Project specific content from JSON file as *.value to pass it to modal.js
-    project.value = content.projects[num-1];
-
     project.appendChild(img);
-    project.addEventListener("click", function() { openModal(content.projects[num-1]) });
+    project.addEventListener("click", function() { openModal(projectTitle, projectDescription, projectImages) });
 
     let title = document.createElement('h2');
-    title.innerHTML = content.projects[num -1].title;
+    title.innerHTML = projectTitle;
     project.appendChild(title);
 
     file.appendChild(project);
@@ -50,8 +53,8 @@ const renderProjects = content => {
 
   let firstPic = true;
 
-  for (let num of projects) {
-    newProject(num);
+  for (let currentProject of projects) {
+    newProject(currentProject);
   }
 }
 //passing promise to render Projects

@@ -1,6 +1,7 @@
 * {
   padding: 0;
   margin: 0;
+  text-align: center;
 
 }
 
@@ -52,7 +53,7 @@ header a {
   display: block;
   background-color: rgba(255,255,255, 0.6);
   margin: 1em;
-  font-family: 'stigmate';
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 0 5px;
   height: 40px;
   border-radius: 5px;
@@ -81,9 +82,16 @@ header a:hover{
   padding: 20px;
 }
 
+.project {
+  background-color: rgba(255,255,255, 0.3);
+  padding: 5%;
+  border-radius: 5px;;
+}
+
 .project img {
   width: 100%;
   border-radius: 5px;
+
 }
 
 #modalContent img {
@@ -141,16 +149,32 @@ footer {
   color:#30bbb4;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
   .page {
     flex-direction: column;
   }
 
+  
   #projects {
     grid-template-columns: repeat(2, minmax(100px, 1fr));
   }
 
   .mainPro {
     grid-column: 1 / span 2;
+  }
+}
+
+@media (max-width: 500px) {
+  .page {
+    flex-direction: column;
+  }
+
+  
+  #projects {
+    grid-template-columns: minmax(100px, 1fr);
+  }
+
+  .mainPro {
+    grid-column: 1 / span 1;
   }
 }
