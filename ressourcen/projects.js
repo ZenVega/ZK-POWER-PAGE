@@ -8,7 +8,6 @@ const loadProjects = async(url) => {
 }
 
 const renderProjects = content => {
-
   //get number of projects / create project array
   let numberOfProjects = content.projects.length;
   let projects = content.projects;

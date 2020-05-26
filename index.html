@@ -2,7 +2,7 @@
 <html>
   <head>
       <meta charset="utf-8">
-      <title>zk-power</title>
+      <title>ZK-PWR</title>
       <link rel="stylesheet" type="text/css" href="styles/style.css">
       <meta name="viewport" content="width=device-width">
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
@@ -19,9 +19,10 @@
           <div>Power</div>
         </h3>
         <nav>
-          <a href="">CONTACT + ABOUT</a>
-          <a href="">WE LIKE</a>
-          <a href="">IMPRINT</a>
+          <a id="contact">CONTACT</a>
+          <a id="about">ABOUT</a>
+          <a id="like">WE LIKE</a>
+          <a id="imprint">IMPRINT</a>
         </nav>
       </header>
       <main>
@@ -36,7 +37,28 @@
               <button class="back">◀︎</button>
               <button class="next">▶︎</button>
             </span>
-            
+          </div>
+        </div>
+        <div id="navModals">
+          <div class="navModal" id="contactModal">
+            <button class="closeNavBtn">&times;</button>
+            <h2>CONTACT</h2>
+            <p></p>
+          </div>
+          <div class="navModal" id="aboutModal">
+            <button class="closeNavBtn">&times;</button>
+            <h2>ABOUT</h2>
+            <p></p>
+          </div>
+          <div class="navModal" id="imprintModal">
+            <button class="closeNavBtn">&times;</button>
+            <h2>IMPRINT</h2>
+            <p></p>
+          </div>
+          <div class="navModal" id="likeModal">
+            <button class="closeNavBtn">&times;</button>
+            <h2>LIKE</h2>
+            <p></p>
           </div>
         </div>
         </div>
@@ -44,5 +66,6 @@
     </div>
     <script type="module" src="ressourcen/modal.js"></script>
     <script type="module" src="ressourcen/projects.js"></script>
+    <script type="module" src="ressourcen/subSites.js"></script>
   </body>
 </html>
