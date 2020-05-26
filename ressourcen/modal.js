@@ -1,5 +1,11 @@
 const modal = document.getElementById("modal");
 const closeBtn = document.getElementById('closeBtn');
+let nextButton = document.getElementsByClassName('next');
+let previousButton = document.getElementsByClassName('back');
+
+//HERE WE ARE
+nextButton.addEventListener('click', );
+previousButton.addEventListener('click');
 
 export const openModal = (projectTitle, projectDescription, projectImages) => {
   const content = document.getElementById('modalContent')
