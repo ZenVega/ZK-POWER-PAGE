@@ -3,11 +3,11 @@ const aboutButton = document.getElementById('about');
 const imprintButton = document.getElementById('imprint');
 const likeButton = document.getElementById('like');
 
-const navModals = document.getElementsByClassName('navModal');
-const closeNavButtons = document.getElementsByClassName('closeNavBtn');
-const closeBtns = document.querySelectorAll('.closeNavButtons')
-console.log(closeNavButtons);
-console.log(closeBtns);
+// const navModals = document.getElementsByClassName('navModal');
+// const closeNavButtons = document.getElementsByClassName('closeNavBtn');
+// const closeBtns = document.querySelectorAll('.closeNavButtons')
+// console.log(closeNavButtons);
+// console.log(closeBtns);
 
 const contactModal = document.getElementById('contactModal');
 const aboutModal = document.getElementById('aboutModal');
@@ -30,7 +30,11 @@ const closeNavModal = () => {
 }
 //WHYYYYYYYYYYYY
 //closeNavButtons[0].onclick = function() {console.log('click')};
-closeBtns.forEach(button => button.addEventListener('click', closeNavModal))
+//closeBtns.forEach(button => button.addEventListener('click', closeNavModal))
 //$('.closeNavButtons').on('click', function() {console.log('tio')});
 
 //addEventListenerByClass('closeNavBtn', 'click', function(){console.log('tip')}); 
+document.getElementById("navModals").addEventListener("click", function(e) {
+  e.target.parentElement.style.display = 'none';
+  //console.log(e.target.parentElement);
+});
