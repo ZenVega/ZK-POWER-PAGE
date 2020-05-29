@@ -1,0 +1,40 @@
+:root {
+  --primary-color: #2ab7ca;
+  --secondary-color: #fe4a49;
+  --text-color-dark: #0a0908;
+  --text-color-light: #22333b;
+  --white: #eaebed;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.main-nav  {
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.searchbar-container{
+  padding: 10px;
+}
+
+.categories{
+    display: flex;
+    width: 30vh;
+    justify-content: space-between;
+}
+
+.categories li{
+    list-style: none;
+}
+
